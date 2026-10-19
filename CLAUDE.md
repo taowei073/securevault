@@ -28,8 +28,10 @@ The app is the stage; the test framework and security testing are the showcase.
 ## Security requirements
 
 - Ownership check on every note endpoint; return 404 (not 403) for other users' notes
-- Role checks on admin endpoints (403 for non-admins)
-- Account lockout after 5 failed logins; rate limits on login
+- Role checks on admin endpoints (403 for non-admins); admins cannot read note contents
+- Account lockout after 5 failed logins, time-based (15 minutes, not permanent); rate limits on login
+- Token storage: browser sessions use HttpOnly, Secure, SameSite=Strict cookies with a CSRF
+  token on every form; API clients use `Authorization: Bearer` tokens
 - Separate request schemas so clients cannot set `role` or `owner_id`
 - Security headers (CSP, HSTS, X-Frame-Options, X-Content-Type-Options), strict CORS
 - Generic error messages, no stack traces, same response for unknown user and wrong password
