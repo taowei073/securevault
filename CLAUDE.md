@@ -1,6 +1,6 @@
 # SecureVault
 
-A portfolio project for job applications. It shows two skill sets:
+A portfolio project for practice. It shows two skill sets:
 **Python test automation** and **hands-on application security**.
 
 SecureVault is a small multi-user notes vault (FastAPI) with roles and sharing.
