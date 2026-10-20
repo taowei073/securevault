@@ -50,7 +50,7 @@ tests/      conftest.py, api/, ui/pages/, security/, support/
 
 ## How we work together
 
-The owner is learning and must be able to explain every line in interviews.
+The owner is learning and must be able to explain every line.
 
 - Work in **small steps**: one task per change. Propose a plan before writing code.
 - After writing code, **explain what it does and why** in plain language,
